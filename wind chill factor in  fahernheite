@@ -1,0 +1,13 @@
+include<stdio.h>
+#include<math.h>
+int main()
+{
+    int wcf,wind,temp;
+    printf("enter air temperature in fahrenheit : ");
+    scanf("%d",&temp);
+    printf("enter wind speed in mph:");
+    scanf("%d",&wind);
+    wcf=35.74+0.6215*temp+(0.4275*temp-35.75)*pow(wind,0.16);
+    printf("wind chill factor in fahrenheit:%f",wcf);
+    return 0;
+}
