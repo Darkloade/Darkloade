@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    float l,b,r;
+    printf("enter the lenth  of rectangle:");
+    scanf("%f",&l);
+    printf("enter the breadth of rectangle:");
+    scanf("%f",&b);
+    printf("enter the radius of circle:");
+    scanf("%f",&r);
+    printf("area of rectangle\n");
+    printf("perimeter of rectangle\n");
+    printf("area of circle\n");
+    printf("circumference of circle\n");
+    return 0;
+}
+fin
