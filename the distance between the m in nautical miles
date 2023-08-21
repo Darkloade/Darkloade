@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float L1,L2,G1,G2,D;
+    printf("enter the value of latitude\n:");
+    scanf("%d%d",&L1,&L2);
+    printf("enter the value of longitude\n:");
+    scanf("%d%d",&G1,&G2);
+    D = 3963*acos(sin(L1)*sin(L2) + cos(L1)*cos(L2)*cos(G2-G1));
+    printf("\ndistance : %f ",D);
+    return 0;
+}
