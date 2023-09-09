@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    int num, a1,a2,a3,a4,a5,reverse,d1,d2,d3,d4,d5;
+    printf("enter a 5 digit number\n");
+    scanf("%d",&num);
+    a1=num/10;
+    d5=num%10;
+    a2=a1/10;
+    d4=a1%10;
+    a3=a2/10;
+    d3=a2%10;
+    a4=a3/10;
+    d2=a3%10;
+    a5=a4/10; 
+    reverse=d5*10000+d4*1000+d3*100+d2*10+d1*1;
+    printf("reverse number of %d is %d\n",num,reverse);
+    if (num==reverse)
+    printf("both the numbers are equal");
+    else
+    printf("both the number are not equal");
+    return 0;
