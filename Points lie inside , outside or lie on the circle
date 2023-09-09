@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    float x,y,r;
+    printf("enter the radius of circle\n");
+    scanf("%d",r);
+    printf("enter the coordinate x-y of the point for checking its position\n\n");
+    scanf("%d%d",&x,&y);
+    if(r>sqrt(pow(x,2)+pow(y,2)));
+    printf("the points lie inside the circle\n\n");
+    else if (r==sqrt(pow(x,2)+pow(y,2)));
+    printf("the points lie on the circle\n\n");
+    else
+    printf("the points lie outside the circle\n\n");
+    return 0;
+}
