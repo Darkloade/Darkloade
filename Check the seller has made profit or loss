@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int cp,sp,p,l;
+    printf("\nenter cost price and selling price:");
+    scanf("%d%d",&cp,&sp);
+    p=sp-cp;
+    l=cp-sp;
+    if(p>0)
+      printf("the seller has made a profit of Rs.%d\n",p);
+    if(l>0)
+      printf("the saller made a loss of Rs.%d\n",l);
+    if(p==0)
+      printf("the saller made no profit ,no loss\n");
+      return 0;
+}
