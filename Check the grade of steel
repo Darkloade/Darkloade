@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    float h,ts,cc;
+    int grade;
+    int c1,c2,c3;
+    printf("enter the value of hardness:");
+    scanf("%f",&h);
+    printf("enter the value of carbon content:");
+    scanf("%f",&cc);
+    printf("enter the value of tensile strength:");
+    scanf("%f",&ts);
+    c1=h>50;
+    c2=cc<0.7;
+    c3=ts>5600;
+    if(c1&&c2&&c3)
+    grade= 10;
+    else if(c1&&c2)
+    grade = 9;
+    else if(c2&&c3)
+    grade = 8;
+    else if (c1&&c3)
+    grade = 7;
+    else if(c1&&c2&&c3)
+    grade = 6;
+    else
+    grade = 5;
+    printf("the grade of steel:%d\n",grade);
+    return 0;
+}
