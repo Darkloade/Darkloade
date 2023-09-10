@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int r,g,b,c,y,w,m,k,rf,gf,bf,max;
+    printf("enter the value of red(0to255)");
+    scanf("%d",&r);
+    printf("enter the value of green(0to255)");
+    scanf("%d",&g);
+    printf("enter the value of blue(0to255)");
+    scanf("%d",&b);
+    rf=r/255;
+    gf=g/255;
+    bf=b/255;
+    printf("red:%d\ngreen:%d\nblue:%d\n",rf,gf,bf);
+    max=rf;
+    if(max<gf)
+    max=gf;
+    if(max<bf)
+    max=bf;
+    w=max;
+    printf("white:%d\n\n",w);
+    c=(w-rf)/w;
+    m=(w-gf)/w;
+    y=(w-bf)/w;
+    k=1-w;
+    printf("the value of cyan:%d\n",c);
+    printf("the value of megenta:%d\n",m);
+    printf("the value of yellow:%d\n ",y);
+    printf("the value of black:%d\n ",k);
+    return 0;
+}
