@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int i,num,sum,d,sum;
+    for(i=1;i<=500;i++)
+    while(num)
+    {
+        num = i;
+        sum = 0;
+        while(num)
+        {
+            d=num%10;
+            sum=sum + (d*d*d);
+            num = num/10;
+        }
+        if(i==sum)
+        {
+            printf("%d is a as=restrong number\n",i);
+        }
+    }
+
+
+
+}
