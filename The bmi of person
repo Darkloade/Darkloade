@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float bmi,weight,kg,height;
+    printf("enter the weight(in kg) of the person\n:");
+    scanf("%f",&weight);
+    printf("enter the height of the person\n:");
+    scanf("%f",&height);
+    bmi=weight/(pow(height,2));
+    printf("the bmi of person is :%2f\n",bmi);
+    if(bmi>0&&bmi<=15)
+    printf("bmi catogary is starvation");
+    else if(bmi>=15.1&&bmi<=17.5)
+    printf("bmi catogary is anoresic");
+     else if(bmi>=17.6&&bmi<=18.5)
+    printf("bmi catogary is underweight");
+     else if(bmi>=18.6&&bmi<=24.9)
+    printf("bmi catogary is ideal");
+     else if(bmi>=25&&bmi<=25.9)
+    printf("bmi catogary is overweight");
+     else if(bmi>=30&&bmi<=30.9)
+    printf("bmi catogary is obese");
+     else if(bmi>=40)
+    printf("bmi catogary is morbidly obese");
+    return 0;
+}
+    
