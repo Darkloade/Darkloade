@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+    int i;
+    char ascii;
+    for(i=1;i<=225;i++)
+    {
+        printf("%c=%d\n",i,i);
+    }
+    return 0;
+}
