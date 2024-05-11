@@ -1,0 +1,29 @@
+// github-repositories.component.ts
+import { Component } from '@angular/core';
+import { GithubService } from './github.service';
+
+@Component({
+  selector: 'app-github-repositories',
+  templateUrl: './github-repositories.component.html',
+  styleUrls: ['./github-repositories.component.css']
+})
+export class GithubRepositoriesComponent {
+  username: string = '';
+  repositories: any[] = [];
+  errorMessage: string = '';
+
+  constructor(private githubService: GithubService) {}
+
+  searchRepositories(): void {
+    this.githubService.getUserRepositories(this.username).subscribe(
+      (repos: any[]) => {
+        this.repositories = repos;
+        this.errorMessage = '';
+      },
+      (error) => {
+        this.repositories = [];
+        this.errorMessage = 'User not found or no public repositories found.';
+      }
+    );
+  }
+}
