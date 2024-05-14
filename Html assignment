@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Browser</title>
+</head>
+
+<body >
+  
+  <!-- github-repositories.component.html -->
+<div class="container">
+  <input type="text" [(ngModel)]="username" placeholder="Enter GitHub username">
+  <button (click)="searchRepositories()">Search</button>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  <div *ngIf="repositories.length > 0" class="repositories">
+    <h2>Repositories for {{ username }}</h2>
+    <ul>
+      <li *ngFor="let repo of repositories">
+        <a [href]="repo.html_url" target="_blank">{{ repo.name }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
+7:22 PM
+Submit assignment
